@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>FORM VALIDATION</title>
+		<link rel="stylesheet" href="./style/style.css">
+	</head>
+	<body>
+		<div class="mainContainer">
+			<h1>REGISTRATION FORM</h1>
+			<form id="myForm" onsubmit="validateForm(event)">
+				<label for="firstName">Enter First name:</label><br>
+				<input type=text id="firstName"  placeholder="Enter your first name" onkeypress="return (event.charCode > 64 && 
+        			event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)">
+				<span id="firstNameError" class="error"></span><br>
+				<label for="lastName">Enter Last name:</label><br>
+				<input type=text id="lastName"  placeholder="Enter your last name" onkeypress="return (event.charCode > 64 && 
+        			event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" >
+				<span id="lastNameError" class="error"></span><br>
+				<label for="address">Enter your Address:</label><br>
+				<textarea id="address" placeholder="enter your address" rows="4" cols="66" ></textarea>
+				<span id="addressError" class="error"></span><br>
+				<label for="mobileNumber">Enter mobile number:</label><br>
+				<input type=text id="mobileNumber" maxlength="10"  placeholder="Enter your mobile number" onkeypress="return (event.charCode >47 && 
+        			event.charCode < 59)">
+				<span id="mobileNumberError" class="error"></span><br>
+				<label for="emailID">Enter email id:</label><br>
+				<input type=text id="emailID"  placeholder="Enter your email id">
+				<span id="emailError" class="error"></span><br>
+				<label for="pssword">Enter password:</label><br>
+				<input type=text id="password"  placeholder="New password">
+				<span id="passwordError" class="error"></span><br>
+				<label for="confirmPassword">Confirm password:</label><br>
+				<input type=text id="confirmPassword"  placeholder="confirm password">
+				<span id="confirmPasswordError" class="error"></span><br>
+				<button type="submit" value="Submit">Submit</button>
+				
+
+
+			</form>
+		</div>
+		<script src="script/script.js"></script>
+	</body>
+</html>
